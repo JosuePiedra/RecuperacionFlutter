@@ -1,0 +1,112 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+class MenuPage extends StatelessWidget {
+  const MenuPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Image.asset('assets/images/practicas-image.png'),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // ElevatedButton.icon(
+                  //   onPressed: () {
+                  //     Navigator.pushNamed(context, '/contador');
+                  //   },
+                  //   icon: const Icon(Icons.alarm_add_rounded),
+                  //   label: const Text("Ir contador"),
+                  // ),
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      Get.toNamed(
+                        '/contador_get',
+                      );
+                    },
+                    icon: const Icon(Icons.alarm_add_rounded),
+                    label: const Text("Ir contador GetX"),
+                  ),
+
+                  /*
+
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/carnet_page');
+                    },
+                    child: const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.assignment_ind_outlined),
+                        SizedBox(width: 10),
+                        Text("Ir a Carnet"),
+                      ],
+                    ),
+                  ),
+                  */
+
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      Get.toNamed(
+                        '/carnet_get ',
+                      );
+                    },
+                    icon: const Icon(Icons.assignment_ind_outlined),
+                    label: const Text("Ir a carnet GetX"),
+                  ),
+
+                  /*
+
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/news_page');
+                    },
+                    icon: const Icon(Icons.data_array),
+                    label: const Text("Lectura JSON"),
+                  ),
+
+                  */
+
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      Get.toNamed(
+                        '/news_get',
+                      );
+                    },
+                    icon: const Icon(Icons.data_array),
+                    label: const Text("Ir a noticias GetX"),
+                  ),
+                  /*
+
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/pokemon_page');
+                    },
+                    icon: const Icon(Icons.api),
+                    label: const Text("Lista de pokemons"),
+                  ),
+
+                  */
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      Get.toNamed(
+                        '/pokemon_get',
+                      );
+                    },
+                    icon: const Icon(Icons.api),
+                    label: const Text("Ir a pokemon GetX"),
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
